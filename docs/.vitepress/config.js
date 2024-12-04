@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
+    // 配置文档路径别名
     resolve: {
       alias: {
         '@': '../../src/components',
