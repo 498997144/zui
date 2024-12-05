@@ -41,7 +41,7 @@ import zeroButton from "@/button/zeroButton.vue";
 <zero-button bgColor="pink" color="red">按钮</zero-button>
 ```
 ### 禁用状态
-<zero-button disabled bgColor="pink" color="red">按钮</zero-button>
+<zero-button  disabled>按钮</zero-button>
 ```vue
 <zero-button disabled >按钮</zero-button>
 ```

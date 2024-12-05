@@ -1,16 +1,14 @@
 <template>
-  <div class="z-button">
-    <button
-        ref="buttonRef"
-        @click="$emit('click');"
-        :class="[buttonType,{disabled},{circle}, {round}]"
-        :style="{'--color':color,'--bgColor':bgColor || colorType}"
-    >
-      <i :icon="icon" v-if="prepend && icon"></i>
-      <slot></slot>
-      <i :icon="icon" v-if="icon && !prepend"></i>
-    </button>
-  </div>
+  <button
+      class="z-button"
+      ref="buttonRef"
+      :class="[buttonType,{disabled},{circle}, {round}]"
+      :style="{'--color':color,'--bgColor':bgColor || colorType}"
+  >
+    <i :icon="icon" v-if="prepend && icon"></i>
+    <slot></slot>
+    <i :icon="icon" v-if="icon && !prepend"></i>
+  </button>
 </template>
 
 <script setup>
@@ -74,7 +72,7 @@ const colorType = bgColorType[props.buttonType];
 
 //
 const buttonRef = ref(null);
-const {paddingX,paddingY} =  useChangeShape(buttonRef, props);
+const {paddingX, paddingY} = useChangeShape(buttonRef, props);
 useLightenColor(buttonRef, props);
 
 /**
@@ -89,41 +87,39 @@ defineExpose({
 .z-button {
   display: inline-flex;
   margin: 3px;
-  button {
-    font-size: 14px;
-    user-select: none;
-    border: none;
-    // 根据尺寸类型设置padding
-    padding: v-bind(paddingY) v-bind(paddingX);
-    background-color: var(--bgColor);
-    color: var(--color, white);
-    // 圆形样式
-    &.circle {
-      padding: 0;
-      border-radius: 50%;
-    }
+  font-size: 14px;
+  user-select: none;
+  border: none;
+  // 根据尺寸类型设置padding
+  padding: v-bind(paddingY) v-bind(paddingX);
+  background-color: var(--bgColor);
+  color: var(--color, white);
+  // 圆形样式
+  &.circle {
+    padding: 0;
+    border-radius: 50%;
+  }
 
-    //// 默认颜色
-    //&.default {
-    //  background-color: #b1b3b8;
-    //}
-    //
-    //// 警告颜色
-    //&.warning {
-    //  background-color: #e6a23c;
-    //}
-    //
-    //// 危险颜色
-    //&.danger {
-    //  background-color: #f56c6c;
-    //}
+  //// 默认颜色
+  //&.default {
+  //  background-color: #b1b3b8;
+  //}
+  //
+  //// 警告颜色
+  //&.warning {
+  //  background-color: #e6a23c;
+  //}
+  //
+  //// 危险颜色
+  //&.danger {
+  //  background-color: #f56c6c;
+  //}
 
-    //  禁用样式
-    &.disabled {
-      background-color: #ccc;
-      color: #999;
-      pointer-events: none;
-    }
+  //  禁用样式
+  &.disabled {
+    background-color: var(--disabled-bg-color);
+    color: var(--disabled-color);
+    pointer-events: none;
   }
 }
 </style>

@@ -1,0 +1,14 @@
+:root {
+    /*背景颜色*/
+    --bg-color: #409eff;
+    /*边框颜色*/
+    --border-color: #409eff;
+    /*阴影颜色*/
+    --shadow-color:rgba(0,0,0,.5);
+    /*禁用时的背景颜色*/
+    --disabled-bg-color: #ccc;
+    /*禁用时的文字颜色*/
+    --disabled-color: #999;
+    /*禁用时的边框颜色*/
+    --disabled-border-color: #999;
+}

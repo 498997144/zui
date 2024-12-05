@@ -6,6 +6,7 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': '../../src/components',
+        '@style': '../../src/style',
       }
     },
   },
@@ -22,7 +23,8 @@ export default defineConfig({
       {
         text: '文档示例',
         items: [
-          {text: '按钮', link: '/components/button'}
+          {text: '按钮', link: '/components/button'},
+          {text: '滑块', link: '/components/slider'},
         ]
       },
       {
@@ -36,6 +38,28 @@ export default defineConfig({
 
     socialLinks: [
       {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
-    ]
+    ],
+    styles: [
+      // 添加自定义样式
+      '../../src/style/var.css'
+    ],
+    //开启本地搜索
+    search: {
+      provider: "local"
+    },
+    //修改侧边栏导航的标题
+    outline: {
+      label: "页面导航"
+    },
+    // 修改文档页脚的文字
+    docFooter: {
+      prev: "上一页",
+      next: "下一页"
+    },
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
   }
 });
