@@ -86,10 +86,12 @@ defineExpose({
 <style scoped lang="scss">
 .z-button {
   display: inline-flex;
-  margin: 3px;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   user-select: none;
   border: none;
+  cursor: pointer;
   // 根据尺寸类型设置padding
   padding: v-bind(paddingY) v-bind(paddingX);
   background-color: var(--bgColor);

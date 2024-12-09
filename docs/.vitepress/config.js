@@ -41,7 +41,7 @@ export default defineConfig({
     ],
     styles: [
       // 添加自定义样式
-      '../../src/style/var.css'
+      '../../src/style/var.scss'
     ],
     //开启本地搜索
     search: {
