@@ -3,11 +3,11 @@
     <div class="z-tooltip-trigger" ref="triggerRef">
       <slot></slot>
     </div>
-    <div class="z-tooltip-popup" v-show="isVisible">
+    <div class="z-tooltip-popup" v-show="isVisible" ref="popupRef">
       <slot name="content">
         <span v-html="content"></span>
-        <div class="triangle-box" ref="triangleRef"></div>
       </slot>
+      <div class="triangle-box" ref="triangleRef"></div>
     </div>
   </div>
 </template>
@@ -42,16 +42,16 @@ const emit = defineEmits(['update:visible', 'update:position']);
 //
 const triggerRef = ref(null);
 const triangleRef = ref(null);
-const {isVisible} = useTooltip(props, emit, triggerRef, triangleRef);
+const popupRef = ref(null);
+const {isVisible} = useTooltip(props, emit, triggerRef, triangleRef,popupRef);
 
 </script>
 
 <style scoped lang="scss">
 .z-tooltip {
   position: relative;
-
+  width: fit-content;
   .z-tooltip-trigger {
-
   }
 
   .z-tooltip-popup {
@@ -61,9 +61,11 @@ const {isVisible} = useTooltip(props, emit, triggerRef, triangleRef);
     color: white;
     padding: 5px 10px;
     width: fit-content;
-    transform: translateY(calc(-100% - 10px));
-    left: 0;
-    top: 0;
+    height: fit-content;
+    white-space: nowrap;
+    //transform: translateY(calc(-100% - 10px));
+    //left: 0;
+    //top: 0;
 
     span {
       text-wrap: nowrap;

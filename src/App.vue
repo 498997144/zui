@@ -14,11 +14,10 @@
     <!--    <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
 
     <!--    tooltip-->
-    <zeroTooltip content="展示内容" trigger="click">
+    <zeroTooltip content="展示内容" trigger="click" position="top">
       <zero-button>按钮</zero-button>
-      <template #content></template>
+      <template #content>展示插槽内容</template>
     </zeroTooltip>
-
   </div>
 </template>
 
