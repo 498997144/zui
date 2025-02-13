@@ -14,10 +14,15 @@
     <!--    <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
 
     <!--    tooltip-->
-    <zeroTooltip content="展示内容" trigger="click" position="top">
-      <zero-button>按钮</zero-button>
-      <template #content>展示插槽内容</template>
-    </zeroTooltip>
+<!--    <zeroTooltip content="展示内容" trigger="click" position="top">-->
+<!--      <zero-button>按钮</zero-button>-->
+<!--      <template #content>展示插槽内容</template>-->
+<!--    </zeroTooltip>-->
+<!--icon-->
+<!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
+<!--    <font-awesome-icon :icon="['fas', 'house']" />-->
+    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>
+    <zeroIcon color="blue" name="check"></zeroIcon>
   </div>
 </template>
 
@@ -26,6 +31,7 @@ import {onMounted, ref, watch} from 'vue';
 import zeroButton from "./components/button/zeroButton.vue";
 import zeroSlider from "./components/slider/zeroSlider.vue";
 import zeroTooltip from "./components/tooltip/zeroTooltip.vue";
+import zeroIcon from "./components/icon/zeroIcon.vue";
 // 滑块测试
 // const num = ref(50);
 // watch(() => num.value, (value) => {

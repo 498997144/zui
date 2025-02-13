@@ -26,6 +26,7 @@ export default defineConfig({
           {text: '按钮', link: '/components/button'},
           {text: '滑块', link: '/components/slider'},
           {text: '提示框', link: '/components/tooltip'},
+          {text: '图标', link: '/components/icon'},
         ]
       },
       {
