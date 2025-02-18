@@ -2,7 +2,7 @@
 import zeroIcon from "@/icon/zeroIcon.vue";
 </script>
 
-### 基本使用
+## 基本使用
 <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>
 
 ```vue
@@ -11,7 +11,7 @@ import zeroIcon from "@/icon/zeroIcon.vue";
 </template>
 ```
 
-### 显示插槽内容
+## 显示插槽内容
 <zeroIcon color='blue' name="check">默认插槽</zeroIcon>
 
 ```vue

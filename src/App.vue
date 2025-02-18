@@ -21,8 +21,22 @@
 <!--icon-->
 <!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
 <!--    <font-awesome-icon :icon="['fas', 'house']" />-->
-    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>
-    <zeroIcon color="blue" name="check"></zeroIcon>
+<!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
+<!--    <zeroIcon color="blue" name="check"></zeroIcon>-->
+<!--    switch开关-->
+<!--    <zeroSwitch active-text="打开了" disabled in-active-text="关闭了" v-model="value"></zeroSwitch>-->
+<!--    <zeroSwitch active-text="打开了" :in-active-value="0" :active-value="50"  in-active-text="关闭了" v-model="value"></zeroSwitch>-->
+<!--    collapse-->
+    <div style="width: 200px;height: 400px">
+      <zeroCollapse v-model="value">
+        <zeroCollapseItem title="标题1" name="a">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sed?</div>
+        </zeroCollapseItem>
+        <zeroCollapseItem title="标题2" name="b">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sed?</div>
+        </zeroCollapseItem>
+      </zeroCollapse>
+    </div>
   </div>
 </template>
 
@@ -32,6 +46,9 @@ import zeroButton from "./components/button/zeroButton.vue";
 import zeroSlider from "./components/slider/zeroSlider.vue";
 import zeroTooltip from "./components/tooltip/zeroTooltip.vue";
 import zeroIcon from "./components/icon/zeroIcon.vue";
+import zeroSwitch from "./components/switch/zeroSwitch.vue";
+import zeroCollapse from "./components/collapase/zeroCollapse.vue";
+import zeroCollapseItem from "./components/collapase/zeroCollapseItem.vue";
 // 滑块测试
 // const num = ref(50);
 // watch(() => num.value, (value) => {
@@ -41,6 +58,11 @@ import zeroIcon from "./components/icon/zeroIcon.vue";
 //
 // tooltip测试
 // const visible = ref(false);
+// switch测试
+// const value = ref(0);
+// 折叠面板测试
+const value = ref([]);
+
 </script>
 <style lang="scss">
 .container {

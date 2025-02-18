@@ -27,6 +27,8 @@ export default defineConfig({
           {text: '滑块', link: '/components/slider'},
           {text: '提示框', link: '/components/tooltip'},
           {text: '图标', link: '/components/icon'},
+          {text: '开关', link: '/components/switch'},
+          {text: '折叠面板', link: '/components/collapse'},
         ]
       },
       {

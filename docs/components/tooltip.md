@@ -3,7 +3,7 @@ import zeroTooltip from "@/tooltip/zeroTooltip.vue";
 import zeroButton from "@/button/zeroButton.vue";
 </script>
 
-### 基本使用
+## 基本使用
  <zeroTooltip content="提示内容" trigger="click" position="top">
       <zero-button>点击方式</zero-button>
       <template #content></template>
@@ -18,7 +18,7 @@ import zeroButton from "@/button/zeroButton.vue";
 </template>
 ```
 
-### 鼠标移入展示
+## 鼠标移入展示
  <zeroTooltip content="提示内容" trigger="mouseenter" position="top">
       <zero-button>鼠标移入</zero-button>
       <template #content>显示插槽内容</template>

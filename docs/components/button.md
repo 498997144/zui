@@ -2,7 +2,7 @@
 <script setup>
 import zeroButton from "@/button/zeroButton.vue";
 </script>
-### 按钮大小
+## 按钮大小
 <zero-button size="small">较小</zero-button>
 <zero-button size="normal">中等</zero-button>
 <zero-button size="large">较大</zero-button>
@@ -11,7 +11,7 @@ import zeroButton from "@/button/zeroButton.vue";
 <zero-button size="normal">中等</zero-button>
 <zero-button size="large">较大</zero-button>
 ```
-### 按钮类型和颜色
+## 按钮类型和颜色
 <zero-button buttonType="default">默认</zero-button>
 <zero-button buttonType="warning">提示</zero-button>
 <zero-button buttonType="danger">慎重</zero-button>
@@ -20,27 +20,27 @@ import zeroButton from "@/button/zeroButton.vue";
 <zero-button buttonType="warning">提示</zero-button>
 <zero-button buttonType="danger">慎重</zero-button>
 ```
-### 禁用点击高亮
+## 禁用点击高亮
 <zero-button :highlight="false">没有高亮</zero-button>
 ```vue
 <zero-button :highlight="false">没有高亮</zero-button>
 ```
-### 圆角
+## 圆角
 <zero-button round >圆角</zero-button>
 ```vue
 <zero-button round >圆角</zero-button>
 ```
-### 圆形
+## 圆形
 <zero-button circle >圆形</zero-button>
 ```vue
 <zero-button circle >圆形</zero-button>
 ```
-### 自定义背景和文字颜色
+## 自定义背景和文字颜色
 <zero-button bgColor="pink" color="red">按钮</zero-button>
 ```vue
 <zero-button bgColor="pink" color="red">按钮</zero-button>
 ```
-### 禁用状态
+## 禁用状态
 <zero-button  disabled>按钮</zero-button>
 ```vue
 <zero-button disabled >按钮</zero-button>

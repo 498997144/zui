@@ -7,7 +7,7 @@ const num1 = ref(1500);
 const bool = ref(true);
 </script>
 
-### 基本使用
+## 基本使用
 <div style="margin: 10px 0;">{{num}}</div>
 <zero-slider styler="margin:10px 0;" v-model="num"></zero-slider>
   
@@ -20,7 +20,7 @@ const bool = ref(true);
 </script>
 ```
 
-### 禁用状态
+## 禁用状态
 <div style="margin: 10px 0;">
 <span >{{num}}</span>
 <zero-button   @click="bool=!bool">点击禁用启用</zero-button></div>
@@ -37,7 +37,7 @@ const bool = ref(true);
 </script>
 ```
 
-### 使用最大值和最小值限制范围
+## 使用最大值和最小值限制范围
 <div style="margin: 10px 0;">{{num1}}</div>
 <zero-slider :max-value="3000" :min-value="800"  
 v-model="num1"></zero-slider>
@@ -52,7 +52,7 @@ v-model="num1"></zero-slider>
 </script>
 ```
 
-### 使用格式化函数
+## 使用格式化函数
 <div style="margin: 10px 0;">{{num1}}</div>
 <zero-slider :max-value="3000" :min-value="800"  
 :format="(value)=>parseFloat(value.toPrecision(8))"

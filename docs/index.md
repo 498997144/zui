@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "ZUI"
-  text: "个人vue3学习项目"
+  text: "vue3组件库学习项目"
   tagline: 
   actions:
     - theme: brand
