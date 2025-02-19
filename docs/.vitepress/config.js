@@ -29,6 +29,7 @@ export default defineConfig({
           {text: '图标', link: '/components/icon'},
           {text: '开关', link: '/components/switch'},
           {text: '折叠面板', link: '/components/collapse'},
+          {text: '下拉菜单', link: '/components/dropdown'},
         ]
       },
       {

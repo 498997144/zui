@@ -14,34 +14,38 @@
     <!--    <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
 
     <!--    tooltip-->
-<!--    <zeroTooltip content="展示内容" trigger="click" position="top">-->
-<!--      <zero-button>按钮</zero-button>-->
-<!--      <template #content>展示插槽内容</template>-->
-<!--    </zeroTooltip>-->
-<!--icon-->
-<!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
-<!--    <font-awesome-icon :icon="['fas', 'house']" />-->
-<!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
-<!--    <zeroIcon color="blue" name="check"></zeroIcon>-->
-<!--    switch开关-->
-<!--    <zeroSwitch active-text="打开了" disabled in-active-text="关闭了" v-model="value"></zeroSwitch>-->
-<!--    <zeroSwitch active-text="打开了" :in-active-value="0" :active-value="50"  in-active-text="关闭了" v-model="value"></zeroSwitch>-->
-<!--    collapse-->
-    <div style="width: 200px;height: 400px">
-      <zeroCollapse v-model="value">
-        <zeroCollapseItem title="标题1" name="a">
-          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sed?</div>
-        </zeroCollapseItem>
-        <zeroCollapseItem title="标题2" name="b">
-          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sed?</div>
-        </zeroCollapseItem>
-      </zeroCollapse>
-    </div>
+    <!--    <zeroTooltip content="展示内容" trigger="click" position="top">-->
+    <!--      <zero-button>按钮</zero-button>-->
+    <!--      <template #content>展示插槽内容</template>-->
+    <!--    </zeroTooltip>-->
+    <!--icon-->
+    <!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
+    <!--    <font-awesome-icon :icon="['fas', 'house']" />-->
+    <!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
+    <!--    <zeroIcon color="blue" name="check"></zeroIcon>-->
+    <!--    switch开关-->
+    <!--    <zeroSwitch active-text="打开了" disabled in-active-text="关闭了" v-model="value"></zeroSwitch>-->
+    <!--    <zeroSwitch active-text="打开了" :in-active-value="0" :active-value="50"  in-active-text="关闭了" v-model="value"></zeroSwitch>-->
+    <!--    collapse-->
+    <!--    <div style="width: 200px;height: 400px">-->
+    <!--      <zeroCollapse v-model="value">-->
+    <!--        <zeroCollapseItem title="标题1" name="a">-->
+    <!--          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sed?</div>-->
+    <!--        </zeroCollapseItem>-->
+    <!--        <zeroCollapseItem title="标题2" name="b">-->
+    <!--          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sed?</div>-->
+    <!--        </zeroCollapseItem>-->
+    <!--      </zeroCollapse>-->
+    <!--    </div>-->
+    <!--    dropdown-->
+    <zeroDropDown :options="opt">
+      <zero-button>点击展示下拉菜单</zero-button>
+    </zeroDropDown>
   </div>
 </template>
 
 <script setup>
-import {onMounted, ref, watch} from 'vue';
+import {onMounted, ref, watch, reactive} from 'vue';
 import zeroButton from "./components/button/zeroButton.vue";
 import zeroSlider from "./components/slider/zeroSlider.vue";
 import zeroTooltip from "./components/tooltip/zeroTooltip.vue";
@@ -49,6 +53,7 @@ import zeroIcon from "./components/icon/zeroIcon.vue";
 import zeroSwitch from "./components/switch/zeroSwitch.vue";
 import zeroCollapse from "./components/collapase/zeroCollapse.vue";
 import zeroCollapseItem from "./components/collapase/zeroCollapseItem.vue";
+import zeroDropDown from "./components/dropdown/zeroDropDown.vue";
 // 滑块测试
 // const num = ref(50);
 // watch(() => num.value, (value) => {
@@ -61,7 +66,26 @@ import zeroCollapseItem from "./components/collapase/zeroCollapseItem.vue";
 // switch测试
 // const value = ref(0);
 // 折叠面板测试
-const value = ref([]);
+// const value = ref([]);
+// 下拉菜单
+
+const opt = reactive([
+  {
+    label: '菜单1',
+    disabled: false,
+    value:1
+  },
+  {
+    label: '菜单2',
+    disabled: false,
+    value:2
+  },
+  {
+    label: '菜单3',
+    disabled: true,
+    value:3
+  }
+]);
 
 </script>
 <style lang="scss">
