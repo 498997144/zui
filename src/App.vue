@@ -13,11 +13,11 @@
     <!--                ></zeroSlider>-->
     <!--    <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
 
-    <!--    tooltip-->
-    <!--    <zeroTooltip content="展示内容" trigger="click" position="top">-->
-    <!--      <zero-button>按钮</zero-button>-->
-    <!--      <template #content>展示插槽内容</template>-->
-    <!--    </zeroTooltip>-->
+<!--        tooltip-->
+        <zeroTooltip content="展示内容" trigger="click"  position="bottom" ref="tooltip">
+          <zero-button>按钮</zero-button>
+          <template #content>展示插槽内容</template>
+        </zeroTooltip>
     <!--icon-->
     <!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
     <!--    <font-awesome-icon :icon="['fas', 'house']" />-->
@@ -38,9 +38,9 @@
     <!--      </zeroCollapse>-->
     <!--    </div>-->
     <!--    dropdown-->
-    <zeroDropDown :options="opt">
-      <zero-button>点击展示下拉菜单</zero-button>
-    </zeroDropDown>
+<!--    <zeroDropDown :options="opt">-->
+<!--      <zero-button>点击展示下拉菜单</zero-button>-->
+<!--    </zeroDropDown>-->
   </div>
 </template>
 
@@ -63,6 +63,10 @@ import zeroDropDown from "./components/dropdown/zeroDropDown.vue";
 //
 // tooltip测试
 // const visible = ref(false);
+// const tooltip = ref(null);
+// onMounted(()=>{
+//   tooltip.value.togglePopper();
+// })
 // switch测试
 // const value = ref(0);
 // 折叠面板测试

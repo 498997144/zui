@@ -3,18 +3,18 @@
     <div class="z-tooltip-trigger" ref="triggerRef">
       <slot></slot>
     </div>
-    <div class="z-tooltip-popup" v-show="isVisible" ref="popupRef">
+    <div class="z-tooltip-popup" id="tooltip" v-show="isVisible" ref="popupRef">
+      <div  data-popper-arrow id="arrow"></div>
       <slot name="content">
         <span v-html="content"></span>
       </slot>
-      <div class="triangle-box" ref="triangleRef"></div>
     </div>
   </div>
 </template>
 
 <script setup>
 import {ref} from 'vue';
-import {useTooltip} from './index.js';
+import {usePopper} from './index.js';
 
 const props = defineProps({
   content: String,
@@ -22,12 +22,9 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  position: {
+  placement: {
     type: String,
-    default: 'top',
-    validator: (value) => {
-      return ['top', 'right', 'bottom', 'left'].includes(value);
-    }
+    default: 'bottom',
   },
   trigger: {
     type: String,
@@ -38,25 +35,30 @@ const props = defineProps({
   },
 })
 //
-const emit = defineEmits(['update:visible', 'update:position']);
+const emit = defineEmits(['update:visible']);
 //
 const triggerRef = ref(null);
-const triangleRef = ref(null);
 const popupRef = ref(null);
-const {isVisible} = useTooltip(props, emit, triggerRef, triangleRef,popupRef);
+const {isVisible, togglePopper} = usePopper(props, emit, triggerRef, popupRef);
+
+
+defineExpose({
+  togglePopper,
+})
 
 </script>
 
 <style scoped lang="scss">
 .z-tooltip {
-  position: relative;
+  //position: relative;
   width: fit-content;
+
   .z-tooltip-trigger {
   }
 
   .z-tooltip-popup {
-    transition: all 0.3s ease;
-    position: absolute;
+    //transition: all 0.3s ease;
+    //position: absolute;
     background-color: black;
     color: white;
     padding: 5px 10px;
@@ -66,35 +68,71 @@ const {isVisible} = useTooltip(props, emit, triggerRef, triangleRef,popupRef);
     //transform: translateY(calc(-100% - 10px));
     //left: 0;
     //top: 0;
-
+    z-index: 1;
     span {
       text-wrap: nowrap;
     }
 
-    .triangle-box {
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      z-index: -1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: block;
-        z-index: -1;
-        border-radius: 2px;
-        background-color: black;
-        border: 1px solid black;
-        transform: rotate(45deg);
-      }
-    }
-
-
+    //.triangle-box {
+    //  width: 10px;
+    //  height: 10px;
+    //  position: absolute;
+    //  z-index: -1;
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //
+    //  &::before {
+    //    content: "";
+    //    position: absolute;
+    //    width: 100%;
+    //    height: 100%;
+    //    display: block;
+    //    z-index: -1;
+    //    border-radius: 2px;
+    //    background-color: black;
+    //    border: 1px solid black;
+    //    transform: rotate(45deg);
+    //  }
+    //}
   }
+
+  //
+  #arrow,
+  #arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+    z-index: -1;
+  }
+
+  #arrow {
+    visibility: hidden;
+  }
+
+  #arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  //
+  #tooltip[data-popper-placement^='top'] > #arrow {
+    bottom: -4px;
+  }
+
+  #tooltip[data-popper-placement^='bottom'] > #arrow {
+    top: -4px;
+  }
+
+  #tooltip[data-popper-placement^='left'] > #arrow {
+    right: -4px;
+  }
+
+  #tooltip[data-popper-placement^='right'] > #arrow {
+    left: -4px;
+  }
+
 }
 </style>
