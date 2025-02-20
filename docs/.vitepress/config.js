@@ -6,6 +6,7 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': '../../src/components',
+        '@img': '../../src/imgs',
         '@style': '../../src/style',
       }
     },
@@ -31,6 +32,8 @@ export default defineConfig({
           {text: '折叠面板', link: '/components/collapse'},
           {text: '下拉菜单', link: '/components/dropdown'},
           {text: '消息提示', link: '/components/message'},
+          {text: '瀑布流布局', link: '/components/waterfall'},
+          {text: '分页', link: '/components/pagination'},
         ]
       },
       {

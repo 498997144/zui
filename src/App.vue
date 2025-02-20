@@ -42,8 +42,20 @@
     <!--      <zero-button>点击展示下拉菜单</zero-button>-->
     <!--    </zeroDropDown>-->
     <!--    消息提示-->
-<!--    <zeroMessage message="lorem 12321312"></zeroMessage>-->
-    <zero-button   @click="createMessage">按钮</zero-button>
+    <!--    <zeroMessage message="lorem 12321312"></zeroMessage>-->
+    <!--    <zero-button   @click="createMessage">按钮</zero-button>-->
+    <!--    瀑布流布局-->
+    <!--    <zeroWaterfall>-->
+    <!--      <zeroWaterfallItem v-for="(src,index) of list" :key="index">-->
+    <!--        <img :src="src" alt="">-->
+    <!--        <div class="text">-->
+    <!--          <span>Lorem ipsum.</span>-->
+    <!--        </div>-->
+    <!--      </zeroWaterfallItem>-->
+    <!--    </zeroWaterfall>-->
+    <!--    分页器-->
+<!--    <zeroPagination @pageChange="pageChange" @pageSizeChange="pageSizeChange"  :max-show="15"-->
+<!--                    :page-size="20" :total-count="test"></zeroPagination>-->
   </div>
 </template>
 
@@ -59,6 +71,10 @@ import zeroCollapseItem from "./components/collapase/zeroCollapseItem.vue";
 import zeroDropDown from "./components/dropdown/zeroDropDown.vue";
 import zeroMessage from "./components/message/zeroMessage.vue";
 import message from "./components/message/index.js";
+import zeroWaterfall from "./components/waterfall/zeroWaterfall.vue";
+import zeroWaterfallItem from "./components/waterfall/zeroWaterfallItem.vue";
+import zeroPagination from "./components/pagination/zeroPagination.vue";
+
 // 滑块测试
 // const num = ref(50);
 // watch(() => num.value, (value) => {
@@ -95,17 +111,62 @@ import message from "./components/message/index.js";
 //   }
 // ]);
 // message
-function createMessage(){
-  message({message:'hello world',duration:2500});
-}
-
+// function createMessage(){
+//   message({message:'hello world',duration:2500});
+// }
+// 瀑布流
+const list = reactive([
+  'src/imgs/1.webp',
+  'src/imgs/2.webp',
+  'src/imgs/3.webp',
+  'src/imgs/4.webp',
+  'src/imgs/5.webp',
+  'src/imgs/6.webp',
+  'src/imgs/7.webp',
+  'src/imgs/8.webp',
+  'src/imgs/9.webp',
+  'src/imgs/1.webp',
+  'src/imgs/2.webp',
+  'src/imgs/3.webp',
+  'src/imgs/4.webp',
+  'src/imgs/5.webp',
+  'src/imgs/6.webp',
+  'src/imgs/7.webp',
+  'src/imgs/8.webp',
+  'src/imgs/9.webp',
+  'src/imgs/1.webp',
+  'src/imgs/2.webp',
+  'src/imgs/3.webp',
+  'src/imgs/4.webp',
+  'src/imgs/5.webp',
+  'src/imgs/6.webp',
+  'src/imgs/7.webp',
+  'src/imgs/8.webp',
+  'src/imgs/9.webp',
+]);
+// 分页器
+// const test = ref(1000);
+// onMounted(() => {
+//   setTimeout(() => {
+//     test.value = 20000;
+//     console.log(1)
+//   }, 2000)
+// })
+//
+// function pageChange(value) {
+//   // console.log(value)
+// }
+//
+// function pageSizeChange(value) {
+//   // console.log(value)
+// }
 </script>
 <style lang="scss">
 .container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //height: 100vh;
+  //width: 100vw;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
 }
 </style>
