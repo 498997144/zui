@@ -13,11 +13,11 @@
     <!--                ></zeroSlider>-->
     <!--    <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
 
-<!--        tooltip-->
-        <zeroTooltip content="展示内容" trigger="click"  position="bottom" ref="tooltip">
-          <zero-button>按钮</zero-button>
-          <template #content>展示插槽内容</template>
-        </zeroTooltip>
+    <!--        tooltip-->
+    <!--        <zeroTooltip content="展示内容" trigger="click"  position="bottom" ref="tooltip">-->
+    <!--          <zero-button>按钮</zero-button>-->
+    <!--          <template #content>展示插槽内容</template>-->
+    <!--        </zeroTooltip>-->
     <!--icon-->
     <!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
     <!--    <font-awesome-icon :icon="['fas', 'house']" />-->
@@ -38,9 +38,12 @@
     <!--      </zeroCollapse>-->
     <!--    </div>-->
     <!--    dropdown-->
-<!--    <zeroDropDown :options="opt">-->
-<!--      <zero-button>点击展示下拉菜单</zero-button>-->
-<!--    </zeroDropDown>-->
+    <!--    <zeroDropDown :options="opt">-->
+    <!--      <zero-button>点击展示下拉菜单</zero-button>-->
+    <!--    </zeroDropDown>-->
+    <!--    消息提示-->
+<!--    <zeroMessage message="lorem 12321312"></zeroMessage>-->
+    <zero-button   @click="createMessage">按钮</zero-button>
   </div>
 </template>
 
@@ -54,6 +57,8 @@ import zeroSwitch from "./components/switch/zeroSwitch.vue";
 import zeroCollapse from "./components/collapase/zeroCollapse.vue";
 import zeroCollapseItem from "./components/collapase/zeroCollapseItem.vue";
 import zeroDropDown from "./components/dropdown/zeroDropDown.vue";
+import zeroMessage from "./components/message/zeroMessage.vue";
+import message from "./components/message/index.js";
 // 滑块测试
 // const num = ref(50);
 // watch(() => num.value, (value) => {
@@ -72,24 +77,27 @@ import zeroDropDown from "./components/dropdown/zeroDropDown.vue";
 // 折叠面板测试
 // const value = ref([]);
 // 下拉菜单
-
-const opt = reactive([
-  {
-    label: '菜单1',
-    disabled: false,
-    value:1
-  },
-  {
-    label: '菜单2',
-    disabled: false,
-    value:2
-  },
-  {
-    label: '菜单3',
-    disabled: true,
-    value:3
-  }
-]);
+// const opt = reactive([
+//   {
+//     label: '菜单1',
+//     disabled: false,
+//     value: 1
+//   },
+//   {
+//     label: '菜单2',
+//     disabled: false,
+//     value: 2
+//   },
+//   {
+//     label: '菜单3',
+//     disabled: true,
+//     value: 3
+//   }
+// ]);
+// message
+function createMessage(){
+  message({message:'hello world',duration:2500});
+}
 
 </script>
 <style lang="scss">
