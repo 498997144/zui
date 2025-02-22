@@ -54,8 +54,11 @@
     <!--      </zeroWaterfallItem>-->
     <!--    </zeroWaterfall>-->
     <!--    分页器-->
-<!--    <zeroPagination @pageChange="pageChange" @pageSizeChange="pageSizeChange"  :max-show="15"-->
-<!--                    :page-size="20" :total-count="test"></zeroPagination>-->
+    <!--    <zeroPagination @pageChange="pageChange" @pageSizeChange="pageSizeChange"  :max-show="15"-->
+    <!--                    :page-size="20" :total-count="test"></zeroPagination>-->
+    <!--    输入框-->
+    <zeroInput v-model="value" clear>
+    </zeroInput>
   </div>
 </template>
 
@@ -74,6 +77,7 @@ import message from "./components/message/index.js";
 import zeroWaterfall from "./components/waterfall/zeroWaterfall.vue";
 import zeroWaterfallItem from "./components/waterfall/zeroWaterfallItem.vue";
 import zeroPagination from "./components/pagination/zeroPagination.vue";
+import zeroInput from "./components/input/zeroInput.vue";
 
 // 滑块测试
 // const num = ref(50);
@@ -160,13 +164,18 @@ const list = reactive([
 // function pageSizeChange(value) {
 //   // console.log(value)
 // }
+// 输入框
+const value = ref('1231');
+watch(() => value.value, (value) => {
+  console.log(value)
+})
 </script>
 <style lang="scss">
 .container {
-  //height: 100vh;
-  //width: 100vw;
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

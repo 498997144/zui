@@ -100,7 +100,7 @@ const {options} = userPagination(props, emit, containerRef, prevBtnRef, nextBtnR
   }
 
   .btn {
-    padding: 2px 5px;
+    padding: 0px 5px;
   }
 
   .jump-box, .page-size-box {
@@ -108,7 +108,7 @@ const {options} = userPagination(props, emit, containerRef, prevBtnRef, nextBtnR
     align-items: center;
 
     input {
-      width: 50px;
+      width: 40px;
       height: 22px;
       outline: 1px solid #eeeeee;
       border: none;

@@ -32,6 +32,7 @@ function createPager(currentPage, maxShow, pageCount, container) {
     start = 1;
   }
   const fragment = document.createDocumentFragment();
+  // 不能直接使用start循环,后续会使用start进行判断
   for (let index = start; index <= end; index++) {
     const div = document.createElement("div");
     div.classList.add("page-item", "item");
@@ -43,6 +44,7 @@ function createPager(currentPage, maxShow, pageCount, container) {
       break;
     }
   }
+
   // 第一个页码和最后一个页码始终显示
   if (start > 1) {
     const pageNumberStart = document.createElement("div");
@@ -97,7 +99,9 @@ export const userPagination = (props, emit, containerRef, prevBtnRef, nextBtnRef
     options.onPageChange && options.onPageChange(options.currentPage);
     options.onPageSizeChange && options.onPageSizeChange(options.pageSize);
   }
+
   const _onPageSizeChange = debounce(onPageSizeChange, 800);
+
   function layout(options, container) {
     const pageCount = Math.ceil(options.totalCount / options.pageSize);
     options.pageCount = pageCount;
@@ -122,6 +126,7 @@ export const userPagination = (props, emit, containerRef, prevBtnRef, nextBtnRef
       createPager(currentPage, options.maxShow, options.pageCount, container);
     });
   }
+
   // 参数
   const options = reactive({
     pageSize: props.pageSize,
@@ -157,6 +162,7 @@ export const userPagination = (props, emit, containerRef, prevBtnRef, nextBtnRef
         // 不能使用并和或判断,逻辑错误,左右两边拉扯
         // if(currentPage !== 1 && currentPage !== pageCount){
         // }
+
         // 1.先做加减操作
         // e.target.classList.contains("next") ? currentPage++ : currentPage--;
         // // 后做最小值和最大值界限判断

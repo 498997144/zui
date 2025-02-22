@@ -24,7 +24,6 @@ export default defineConfig({
       {
         text: '文档示例',
         items: [
-          {text: '按钮', link: '/components/button'},
           {text: '滑块', link: '/components/slider'},
           {text: '提示框', link: '/components/tooltip'},
           {text: '图标', link: '/components/icon'},
@@ -33,7 +32,9 @@ export default defineConfig({
           {text: '下拉菜单', link: '/components/dropdown'},
           {text: '消息提示', link: '/components/message'},
           {text: '瀑布流布局', link: '/components/waterfall'},
+          {text: '按钮', link: '/components/button'},
           {text: '分页', link: '/components/pagination'},
+          {text: '输入框', link: '/components/input'},
         ]
       },
       {

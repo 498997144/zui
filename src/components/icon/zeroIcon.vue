@@ -1,5 +1,5 @@
 <template>
-  <i class="zero-icon" :style="{color}">
+  <i class="zero-icon" :style="{color}" v-bind="$attrs">
     <font-awesome-icon v-bind="$props" :icon="name"/>
   </i>
   <slot></slot>
@@ -21,7 +21,7 @@ const props = defineProps({
     type: String,
     default: '',
   }
-})
+});
 </script>
 
 <style scoped lang="scss">
