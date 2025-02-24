@@ -57,8 +57,19 @@
     <!--    <zeroPagination @pageChange="pageChange" @pageSizeChange="pageSizeChange"  :max-show="15"-->
     <!--                    :page-size="20" :total-count="test"></zeroPagination>-->
     <!--    输入框-->
-    <zeroInput v-model="value" clear>
-    </zeroInput>
+    <!--    <zeroInput v-model="value" clear>-->
+    <!--    </zeroInput>-->
+    <!--    &lt;!&ndash;  日历&ndash;&gt;-->
+    <!--    <zeroCalendar v-model="value"></zeroCalendar>-->
+    <!--    轮播图-->
+    <!--    <zeroSwiper :count="imgList.length">-->
+    <!--      <zeroSwiperItem v-for="(src,index) in imgList" :key="index">-->
+    <!--        <img :src="src" alt="">-->
+    <!--      </zeroSwiperItem>-->
+    <!--    </zeroSwiper>-->
+    <ul v-scroll-load:[disabled]="load" :scroll-distance="20" class="list">
+      <li v-for="i in count" :key="i" class="list-item">{{ i }}</li>
+    </ul>
   </div>
 </template>
 
@@ -78,6 +89,9 @@ import zeroWaterfall from "./components/waterfall/zeroWaterfall.vue";
 import zeroWaterfallItem from "./components/waterfall/zeroWaterfallItem.vue";
 import zeroPagination from "./components/pagination/zeroPagination.vue";
 import zeroInput from "./components/input/zeroInput.vue";
+import zeroCalendar from "./components/calendar/zeroCalendar.vue";
+import zeroSwiper from "./components/swiper/zeroSwiper.vue";
+import zeroSwiperItem from "./components/swiper/zeroSwiperItem.vue";
 
 // 滑块测试
 // const num = ref(50);
@@ -165,10 +179,29 @@ const list = reactive([
 //   // console.log(value)
 // }
 // 输入框
-const value = ref('1231');
-watch(() => value.value, (value) => {
-  console.log(value)
-})
+// const value = ref('1231');
+// watch(() => value.value, (value) => {
+//   console.log(value)
+// })
+// 日历
+// const value = ref('');
+// 轮播图
+// const imgList = reactive([
+//   'src/imgs/1.webp',
+//   'src/imgs/2.webp',
+//   'src/imgs/3.webp',
+//   'src/imgs/4.webp',
+// ])
+// 无限滚动
+const count = ref(10);
+const disabled = ref(false);
+const load = () => {
+  if (count.value >= 20) {
+    disabled.value = true;
+    return;
+  }
+  count.value += 4
+}
 </script>
 <style lang="scss">
 .container {
@@ -177,5 +210,25 @@ watch(() => value.value, (value) => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.list {
+  height: 300px;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: auto;
+  overscroll-behavior: none;
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: var(--bg-color);
+    margin: 10px;
+    color: var(--font-color);
+  }
 }
 </style>

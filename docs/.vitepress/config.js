@@ -6,8 +6,9 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': '../../src/components',
+        '@dir': '../../../src/directives',
         '@img': '../../src/imgs',
-        '@style': '../../src/style',
+        '@style': '../../../src/style',
       }
     },
   },
@@ -22,7 +23,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '文档示例',
+        text: '组件文档示例',
         items: [
           {text: '滑块', link: '/components/slider'},
           {text: '提示框', link: '/components/tooltip'},
@@ -35,6 +36,14 @@ export default defineConfig({
           {text: '按钮', link: '/components/button'},
           {text: '分页', link: '/components/pagination'},
           {text: '输入框', link: '/components/input'},
+          {text: '日历', link: '/components/calendar.md'},
+          {text: '轮播图', link: '/components/swiper.md'},
+        ]
+      },
+      {
+        text: '指令文档示例',
+        items: [
+          {text: '滚动加载更多', link: '/components/scroll-load.md'},
         ]
       },
       {

@@ -1,67 +1,61 @@
 {
-  "hash": "5df7204f",
-  "configHash": "109c3407",
+  "hash": "a5beef78",
+  "configHash": "7b11e43f",
   "lockfileHash": "464be435",
-  "browserHash": "526e2598",
+  "browserHash": "1194a242",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "97fe64fc",
+      "fileHash": "cb9d3d25",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "f6e73b48",
+      "fileHash": "029ce642",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "9fa5df1b",
+      "fileHash": "8e8d1236",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "5718d107",
+      "fileHash": "5b5a5da7",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "444aeb22",
+      "fileHash": "3aa47914",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "46ccebd5",
+      "fileHash": "06e28590",
       "needsInterop": false
     },
     "@fortawesome/fontawesome-svg-core": {
       "src": "../../../../node_modules/@fortawesome/fontawesome-svg-core/index.mjs",
       "file": "@fortawesome_fontawesome-svg-core.js",
-      "fileHash": "2560a447",
+      "fileHash": "0c76144e",
       "needsInterop": false
     },
     "@fortawesome/free-solid-svg-icons": {
       "src": "../../../../node_modules/@fortawesome/free-solid-svg-icons/index.mjs",
       "file": "@fortawesome_free-solid-svg-icons.js",
-      "fileHash": "d00f0c2c",
-      "needsInterop": false
-    },
-    "@popperjs/core": {
-      "src": "../../../../node_modules/@popperjs/core/lib/index.js",
-      "file": "@popperjs_core.js",
-      "fileHash": "ec0c486e",
+      "fileHash": "5fea35dd",
       "needsInterop": false
     },
     "@fortawesome/vue-fontawesome": {
       "src": "../../../../node_modules/@fortawesome/vue-fontawesome/index.es.js",
       "file": "@fortawesome_vue-fontawesome.js",
-      "fileHash": "391086eb",
+      "fileHash": "b2c22a34",
       "needsInterop": false
     }
   },

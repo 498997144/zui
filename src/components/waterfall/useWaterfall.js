@@ -74,7 +74,7 @@ export const useWaterfall = (props, containerRef) => {
     });
 
     // 添加resize事件
-    window.addEventListener('resize', ()=>{
+    window.addEventListener('resize', () => {
       startLayout(container, list);
     });
     // 过渡时获取元素宽高不一致，需要监听过渡结束事件,再次重新布局。
@@ -91,7 +91,7 @@ export const useWaterfall = (props, containerRef) => {
       // }
     });
   });
-  onUnmounted(()=>{
+  onUnmounted(() => {
     window.removeEventListener('resize', startLayout);
   });
 };
