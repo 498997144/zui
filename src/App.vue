@@ -11,7 +11,7 @@
     <!--                @change="(value)=>{console.log(value)}"></zeroSlider>-->
     <!--    <zeroSlider :min-value="0"  :disabled="disabled" :max-value="100" v-model="num"-->
     <!--                ></zeroSlider>-->
-    <!--    <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
+    <!--        <zero-button   @click="disabled=!disabled">按钮</zero-button>-->
 
     <!--        tooltip-->
     <!--        <zeroTooltip content="展示内容" trigger="click"  position="bottom" ref="tooltip">-->
@@ -62,14 +62,18 @@
     <!--    &lt;!&ndash;  日历&ndash;&gt;-->
     <!--    <zeroCalendar v-model="value"></zeroCalendar>-->
     <!--    轮播图-->
-    <!--    <zeroSwiper :count="imgList.length">-->
-    <!--      <zeroSwiperItem v-for="(src,index) in imgList" :key="index">-->
-    <!--        <img :src="src" alt="">-->
-    <!--      </zeroSwiperItem>-->
-    <!--    </zeroSwiper>-->
-    <ul v-scroll-load:[disabled]="load" :scroll-distance="20" class="list">
-      <li v-for="i in count" :key="i" class="list-item">{{ i }}</li>
-    </ul>
+    <!--        <zeroSwiper :count="imgList.length">-->
+    <!--          <zeroSwiperItem v-for="(src,index) in imgList" :key="index">-->
+    <!--            <img :src="src" alt="">-->
+    <!--          </zeroSwiperItem>-->
+    <!--        </zeroSwiper>-->
+    <!--    <ul v-scroll-load:[disabled]="load" :scroll-distance="20" class="list">-->
+    <!--      <li v-for="i in count" :key="i" class="list-item">{{ i }}</li>-->
+    <!--    </ul>-->
+    <!--    select-->
+    <!--    <zeroSelect :options="opt" multiple v-model="value"></zeroSelect>-->
+    <!--    upload-->
+    <zeroUpload></zeroUpload>
   </div>
 </template>
 
@@ -92,6 +96,8 @@ import zeroInput from "./components/input/zeroInput.vue";
 import zeroCalendar from "./components/calendar/zeroCalendar.vue";
 import zeroSwiper from "./components/swiper/zeroSwiper.vue";
 import zeroSwiperItem from "./components/swiper/zeroSwiperItem.vue";
+// import zeroSelect from "./components/select/zeroSelect.vue";
+import zeroUpload from "./components/upload/zeroUpload.vue";
 
 // 滑块测试
 // const num = ref(50);
@@ -193,15 +199,36 @@ const list = reactive([
 //   'src/imgs/4.webp',
 // ])
 // 无限滚动
-const count = ref(10);
-const disabled = ref(false);
-const load = () => {
-  if (count.value >= 20) {
-    disabled.value = true;
-    return;
-  }
-  count.value += 4
-}
+// const count = ref(10);
+// const disabled = ref(false);
+// const load = () => {
+//   if (count.value >= 20) {
+//     disabled.value = true;
+//     return;
+//   }
+//   count.value += 4
+// }
+
+// select
+// const value = ref([1]);
+// const opt = reactive([
+//   {
+//     label: '菜单1',
+//     disabled: false,
+//     value: 1
+//   },
+//   {
+//     label: '菜单2',
+//     disabled: false,
+//     value: 2
+//   },
+//   {
+//     label: '菜单3',
+//     disabled: true,
+//     value: 3
+//   }
+// ]);
+
 </script>
 <style lang="scss">
 .container {

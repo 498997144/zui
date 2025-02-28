@@ -10,6 +10,7 @@ import {
   parse$1,
   text
 } from "./chunk-3IJK52MP.js";
+import "./chunk-RR3RQRRX.js";
 
 // node_modules/@fortawesome/vue-fontawesome/index.es.js
 function ownKeys(e, r) {

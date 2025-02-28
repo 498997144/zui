@@ -22,9 +22,9 @@
         <slot name="append"></slot>
       </div>
       <div class="zero-input-clear">
-        <zero-icon @click="toggleIconName" size="1x" v-if="showPassword" :name="showIcon ? 'eye-slash' : 'eye'"
+        <zero-icon @click.stop="toggleIconName" size="1x" v-if="showPassword" :name="showIcon ? 'eye-slash' : 'eye'"
                    color="#999"></zero-icon>
-        <zero-icon @click="onClear" size="xs" class="clear-icon" v-if="!showPassword  && showClear && modelValue"
+        <zero-icon @click.stop="onClear" size="xs" class="clear-icon" v-if="!showPassword  && showClear && modelValue"
                    name="xmark"
                    color="#999"></zero-icon>
       </div>
@@ -114,7 +114,13 @@ const toggleIconName = () => {
 
 defineExpose({
   inputRef,
-  textareaRef
+  textareaRef,
+  hideClearIcon: () => {
+    showClear.value = false;
+  },
+  showClearIcon: () => {
+    showClear.value = true;
+  },
 });
 </script>
 
@@ -152,8 +158,8 @@ defineExpose({
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border: 1px solid var(--disabled-border-color);
       border-radius: 50%;
       cursor: pointer;

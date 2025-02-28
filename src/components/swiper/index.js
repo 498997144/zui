@@ -2,10 +2,10 @@ import {onMounted, onUnmounted, ref} from 'vue';
 
 function throttle(fn, delay = 0) {
   let flag = true;
-  return function () {
+  return function (...args) {
     if (flag) {
       flag = false;
-      fn.apply(this, arguments);
+      fn.apply(this, ...args);
       setTimeout(() => {
         flag = true;
       }, delay);

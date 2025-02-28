@@ -1,18 +1,19 @@
 :root {
-    /*背景颜色*/
-    --bg-color: #8cbcee;
-    --hover-bg-color: rgb(121.3, 187.1, 255);
-    /*边框颜色*/
-    --hover-border-color: #409eff;
-    --border-color: #c0c4cc;
-    /*阴影颜色*/
-    --shadow-color:rgba(0,0,0,.5);
-    /*文字颜色*/
-    --font-color: #606266;
-    /*禁用时的背景颜色*/
-    --disabled-bg-color: #ccc;
-    /*禁用时的文字颜色*/
-    --disabled-color: #999;
-    /*禁用时的边框颜色*/
-    --disabled-border-color: #999;
+  /*背景颜色*/
+  --bg-color: #8cbcee;
+  --hover-bg-color: rgb(121.3, 187.1, 255);
+  /*边框颜色*/
+  --hover-border-color: #409eff;
+  --border-color: #c0c4cc;
+  /*阴影颜色*/
+  --shadow-color: rgba(0, 0, 0, .5);
+  /*文字颜色*/
+  --font-color: #606266;
+  --active-color: #409eff;
+  /*禁用时的背景颜色*/
+  --disabled-bg-color: #ccc;
+  /*禁用时的文字颜色*/
+  --disabled-color: #999;
+  /*禁用时的边框颜色*/
+  --disabled-border-color: #999;
 }

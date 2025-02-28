@@ -18,7 +18,7 @@ import {useLightenColor, useChangeShape} from './index.js';
 const props = defineProps({
   buttonType: {
     type: String,
-    default: 'default',
+    default: 'primary',
   },
   size: {
     type: String,
@@ -67,6 +67,7 @@ const bgColorType = {
   default: '#b1b3b8',
   warning: '#e6a23c',
   danger: '#f56c6c',
+  primary: '#409eff',
 };
 const colorType = bgColorType[props.buttonType];
 
@@ -96,6 +97,7 @@ defineExpose({
   padding: v-bind(paddingY) v-bind(paddingX);
   background-color: var(--bgColor);
   color: var(--color, white);
+  line-height: initial;
   // 圆形样式
   &.circle {
     padding: 0;

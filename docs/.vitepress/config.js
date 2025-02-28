@@ -23,25 +23,27 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '组件文档示例',
+        text: '组件',
         items: [
           {text: '滑块', link: '/components/slider'},
           {text: '提示框', link: '/components/tooltip'},
           {text: '图标', link: '/components/icon'},
           {text: '开关', link: '/components/switch'},
           {text: '折叠面板', link: '/components/collapse'},
-          {text: '下拉菜单', link: '/components/dropdown'},
+          {text: '选择器', link: '/components/select.md'},
           {text: '消息提示', link: '/components/message'},
           {text: '瀑布流布局', link: '/components/waterfall'},
           {text: '按钮', link: '/components/button'},
           {text: '分页', link: '/components/pagination'},
           {text: '输入框', link: '/components/input'},
+          {text: '下拉菜单', link: '/components/dropdown'},
           {text: '日历', link: '/components/calendar.md'},
           {text: '轮播图', link: '/components/swiper.md'},
+          {text: '文件上传', link: '/components/upload.md'},
         ]
       },
       {
-        text: '指令文档示例',
+        text: '指令',
         items: [
           {text: '滚动加载更多', link: '/components/scroll-load.md'},
         ]
