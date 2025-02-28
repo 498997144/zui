@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 14px;
 }
 
-.shadow{
+.shadow {
   box-shadow: 0 0px 2px 0 var(--shadow-color)
 }

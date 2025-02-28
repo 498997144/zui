@@ -40,6 +40,7 @@ export default defineConfig({
           {text: '日历', link: '/components/calendar.md'},
           {text: '轮播图', link: '/components/swiper.md'},
           {text: '文件上传', link: '/components/upload.md'},
+          {text: '虚拟滚动列表', link: '/components/virtualList.md'},
         ]
       },
       {

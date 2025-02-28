@@ -73,7 +73,16 @@
     <!--    select-->
     <!--    <zeroSelect :options="opt" multiple v-model="value"></zeroSelect>-->
     <!--    upload-->
-    <zeroUpload></zeroUpload>
+    <!--    <zeroUpload></zeroUpload>-->
+    <!--    虚拟滚动-->
+<!--    <zeroVirtualList v-model="virtualList"-->
+<!--                     class="scroll"-->
+<!--                     :item-height="40"-->
+<!--    >-->
+<!--      <template #default="{item}">-->
+<!--        <div class="scroll-item">{{ item }}</div>-->
+<!--      </template>-->
+<!--    </zeroVirtualList>-->
   </div>
 </template>
 
@@ -98,6 +107,10 @@ import zeroSwiper from "./components/swiper/zeroSwiper.vue";
 import zeroSwiperItem from "./components/swiper/zeroSwiperItem.vue";
 // import zeroSelect from "./components/select/zeroSelect.vue";
 import zeroUpload from "./components/upload/zeroUpload.vue";
+import zeroVirtualList from "./components/virtualList/zeroVirtualList.vue";
+
+// 虚拟滚动
+// const virtualList = reactive(Array.from({length: 100000}, (_, index) => index));
 
 // 滑块测试
 // const num = ref(50);
@@ -258,4 +271,18 @@ const list = reactive([
     color: var(--font-color);
   }
 }
+
+.scroll {
+  height: 400px;
+  width: 200px;
+
+  .scroll-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
 </style>
