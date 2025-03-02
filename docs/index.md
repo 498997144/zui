@@ -4,12 +4,12 @@ layout: home
 
 hero:
   name: "ZUI"
-  text: "vue3组件库学习项目"
-  tagline: 
+  text: "vue3组件练习项目"
+  tagline:
   actions:
     - theme: brand
-      text: 用法示例
-      link: /components/button
+      text: 文档示例
+      link: /components/slider
 
 features:
   - title: Feature A

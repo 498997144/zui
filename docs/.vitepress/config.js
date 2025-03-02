@@ -13,12 +13,12 @@ export default defineConfig({
     },
   },
   title: "ZUI",
-  description: "个人学习项目",
+  description: "学习项目",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {text: '主页', link: '/'},
-      {text: '示例', link: '/components/button'}
+      {text: '文档', link: '/components/slider'}
     ],
 
     sidebar: [

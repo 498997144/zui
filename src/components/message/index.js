@@ -1,8 +1,8 @@
-import {render, h, nextTick} from 'vue';
+import {render, h} from 'vue';
 import zeroMessage from './zeroMessage.vue';
 
 export const messageList = [];
-const message = async (props = {}) => {
+const message =  (props = {}) => {
   const container = document.createElement('div');
   // // 清空节点方法
   // const destroy = () => {

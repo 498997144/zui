@@ -75,19 +75,19 @@
     <!--    upload-->
     <!--    <zeroUpload></zeroUpload>-->
     <!--    虚拟滚动-->
-<!--    <zeroVirtualList v-model="virtualList"-->
-<!--                     class="scroll"-->
-<!--                     :item-height="40"-->
-<!--    >-->
-<!--      <template #default="{item}">-->
-<!--        <div class="scroll-item">{{ item }}</div>-->
-<!--      </template>-->
-<!--    </zeroVirtualList>-->
+    <!--    <zeroVirtualList v-model="virtualList"-->
+    <!--                     class="scroll"-->
+    <!--                     :item-height="40"-->
+    <!--    >-->
+    <!--      <template #default="{item}">-->
+    <!--        <div class="scroll-item">{{ item }}</div>-->
+    <!--      </template>-->
+    <!--    </zeroVirtualList>-->
   </div>
 </template>
 
 <script setup>
-import {onMounted, ref, watch, reactive} from 'vue';
+import {onMounted, ref, watch, reactive, onBeforeMount, shallowReactive, shallowRef} from 'vue';
 import zeroButton from "./components/button/zeroButton.vue";
 import zeroSlider from "./components/slider/zeroSlider.vue";
 import zeroTooltip from "./components/tooltip/zeroTooltip.vue";
@@ -108,6 +108,7 @@ import zeroSwiperItem from "./components/swiper/zeroSwiperItem.vue";
 // import zeroSelect from "./components/select/zeroSelect.vue";
 import zeroUpload from "./components/upload/zeroUpload.vue";
 import zeroVirtualList from "./components/virtualList/zeroVirtualList.vue";
+
 
 // 虚拟滚动
 // const virtualList = reactive(Array.from({length: 100000}, (_, index) => index));
