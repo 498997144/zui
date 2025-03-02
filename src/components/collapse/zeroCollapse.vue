@@ -7,6 +7,11 @@
 <script setup>
 import {ref, provide} from 'vue';
 
+
+defineOptions({
+  name: 'zeroCollapse'
+})
+
 const props = defineProps({
   modelValue: {
     type: [String, Array],

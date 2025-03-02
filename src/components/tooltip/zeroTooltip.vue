@@ -16,6 +16,10 @@
 import {ref} from 'vue';
 import {usePopper} from './index.js';
 
+defineOptions({
+  name: 'zeroTooltip',
+})
+
 const props = defineProps({
   content: String,
   visible: {

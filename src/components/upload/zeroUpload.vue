@@ -50,6 +50,9 @@ import pLimit from 'p-limit';
 import {ref, reactive} from 'vue';
 import zeroButton from '../button/zeroButton.vue'
 
+defineOptions({
+  name: 'zeroUpload'
+})
 
 const props = defineProps({
   accept: {

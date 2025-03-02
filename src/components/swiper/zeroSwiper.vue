@@ -28,6 +28,10 @@ import {ref} from "vue";
 import {useSwiper} from "./index.js";
 import zeroIcon from '../icon/zeroIcon.vue';
 
+defineOptions({
+  name: "zeroSwiper"
+})
+
 const props = defineProps({
   loop: {
     type: Boolean,

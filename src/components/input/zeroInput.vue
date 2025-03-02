@@ -48,7 +48,12 @@
 
 <script setup>
 import zeroIcon from '../icon/zeroIcon.vue';
-import {onMounted, ref, getCurrentInstance, computed, nextTick} from "vue";
+import { ref} from "vue";
+
+
+defineOptions({
+  name: 'zeroInput'
+})
 
 const props = defineProps({
   modelValue: {

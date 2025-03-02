@@ -1,9 +1,15 @@
 {
   "name": "zui",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "description": "",
   "type": "module",
+  "main": "dist/zui.cjs.js",
+  "module": "dist/zui.es.js",
+  "unpkg": "dist/zui.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -25,8 +31,10 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "eslint": "^9.16.0",
     "eslint-plugin-vue": "^9.32.0",
+    "rollup-plugin-visualizer": "^5.14.0",
     "sass-embedded": "^1.81.0",
     "vite": "^5.4.10",
+    "vite-plugin-bundle-analyzer": "^0.0.1",
     "vitepress": "^1.5.0"
   }
 }

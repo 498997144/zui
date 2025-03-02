@@ -15,6 +15,11 @@
 import {ref} from "vue";
 import {useLightenColor, useChangeShape} from './index.js';
 
+
+defineOptions({
+  name: 'zeroButton'
+})
+
 const props = defineProps({
   buttonType: {
     type: String,

@@ -16,7 +16,6 @@ function createMessage(){
   <zero-button @click="createMessage">点击弹出消息</zero-button>
 </template>
 <script setup>
-  import message from "@/message/index.js";
   function createMessage() {
     message({message: 'hello world', duration: 2500});
   }

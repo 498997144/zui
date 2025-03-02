@@ -1,7 +1,7 @@
 <script setup>
 import { reactive} from 'vue';
 import zeroWaterfall from "@/waterfall/zeroWaterfall.vue";
-import zeroWaterfallItem from "@/waterfall/zeroWaterfallItem.vue";
+import zeroWaterfallItem from "@/waterfallitem/zeroWaterfallItem.vue";
 import imgpath1 from '@img/1.webp';
 import imgpath2 from '@img/2.webp';
 import imgpath3 from '@img/3.webp';
@@ -68,8 +68,6 @@ const list = reactive([
 </template>
 <script setup>
   import {reactive} from 'vue';
-  import zeroWaterfall from "@/waterfall/zeroWaterfall.vue";
-  import zeroWaterfallItem from "@/waterfall/zeroWaterfallItem.vue";
 
   const list = reactive([
     'src/imgs/1.webp',

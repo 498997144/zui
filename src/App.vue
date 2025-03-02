@@ -21,7 +21,7 @@
     <!--icon-->
     <!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
     <!--    <font-awesome-icon :icon="['fas', 'house']" />-->
-    <!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
+<!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
     <!--    <zeroIcon color="blue" name="check"></zeroIcon>-->
     <!--    switch开关-->
     <!--    <zeroSwitch active-text="打开了" disabled in-active-text="关闭了" v-model="value"></zeroSwitch>-->
@@ -73,7 +73,7 @@
     <!--    select-->
     <!--    <zeroSelect :options="opt" multiple v-model="value"></zeroSelect>-->
     <!--    upload-->
-    <!--    <zeroUpload></zeroUpload>-->
+<!--    <zeroUpload></zeroUpload>-->
     <!--    虚拟滚动-->
     <!--    <zeroVirtualList v-model="virtualList"-->
     <!--                     class="scroll"-->
@@ -88,28 +88,6 @@
 
 <script setup>
 import {onMounted, ref, watch, reactive, onBeforeMount, shallowReactive, shallowRef} from 'vue';
-import zeroButton from "./components/button/zeroButton.vue";
-import zeroSlider from "./components/slider/zeroSlider.vue";
-import zeroTooltip from "./components/tooltip/zeroTooltip.vue";
-import zeroIcon from "./components/icon/zeroIcon.vue";
-import zeroSwitch from "./components/switch/zeroSwitch.vue";
-import zeroCollapse from "./components/collapase/zeroCollapse.vue";
-import zeroCollapseItem from "./components/collapase/zeroCollapseItem.vue";
-import zeroDropDown from "./components/dropdown/zeroDropDown.vue";
-import zeroMessage from "./components/message/zeroMessage.vue";
-import message from "./components/message/index.js";
-import zeroWaterfall from "./components/waterfall/zeroWaterfall.vue";
-import zeroWaterfallItem from "./components/waterfall/zeroWaterfallItem.vue";
-import zeroPagination from "./components/pagination/zeroPagination.vue";
-import zeroInput from "./components/input/zeroInput.vue";
-import zeroCalendar from "./components/calendar/zeroCalendar.vue";
-import zeroSwiper from "./components/swiper/zeroSwiper.vue";
-import zeroSwiperItem from "./components/swiper/zeroSwiperItem.vue";
-// import zeroSelect from "./components/select/zeroSelect.vue";
-import zeroUpload from "./components/upload/zeroUpload.vue";
-import zeroVirtualList from "./components/virtualList/zeroVirtualList.vue";
-
-
 // 虚拟滚动
 // const virtualList = reactive(Array.from({length: 100000}, (_, index) => index));
 

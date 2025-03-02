@@ -6,7 +6,21 @@
 </template>
 
 <script setup>
+import {library} from '@fortawesome/fontawesome-svg-core';
+// import {fas} from '@fortawesome/free-solid-svg-icons';
+import {faCheck, faUserSecret, faChevronRight,faChevronDown,faAnglesLeft,faAnglesRight,faXmark,
+faEyeSlash,faEye
+} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+// library.add(fas);
+library.add(faCheck, faUserSecret, faChevronRight,faChevronDown,faAnglesLeft,faAnglesRight,faXmark,
+faEyeSlash,faEye
+);
+
+
+defineOptions({
+  name: 'zeroIcon'
+})
 
 const props = defineProps({
   color: {

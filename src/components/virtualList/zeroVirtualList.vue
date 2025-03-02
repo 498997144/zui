@@ -12,6 +12,10 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue';
 
+defineOptions({
+  name: 'zeroVirtualList'
+})
+
 const props = defineProps({
   modelValue: {
     type: Array,

@@ -24,6 +24,11 @@ import zeroIcon from "../icon/zeroIcon.vue";
 
 const {activeNames, clickHandler} = inject('collapse');
 
+
+defineOptions({
+  name: 'zeroCollapseItem'
+})
+
 const props = defineProps({
   title: {
     type: String,

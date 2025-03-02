@@ -9,6 +9,10 @@
 import {ref} from "vue";
 import {useSlider} from './index.js';
 
+defineOptions({
+  name: 'zeroSlider'
+})
+
 const props = defineProps({
   minValue: {
     type: Number,

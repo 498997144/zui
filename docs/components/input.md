@@ -15,7 +15,6 @@ const value = ref('1231');
 </template>
 <script setup>
   import {ref} from 'vue';
-  import zeroInput from "@/input/zeroInput.vue";
   const value = ref('1231');
 </script>
 

@@ -17,10 +17,13 @@
 </template>
 
 <script setup>
-import {isVNode, nextTick, onMounted, ref, watch} from 'vue';
+import {isVNode, onMounted, ref} from 'vue';
 import renderVnode from '../../common/renderVnode.js';
 import zeroIcon from '../icon/zeroIcon.vue';
-import {messageList} from './index.js';
+
+defineOptions({
+  name: 'zeroMessage'
+})
 
 const props = defineProps({
   message: {
@@ -113,7 +116,7 @@ const transitionEvent = {
   //top: 20px;
   //transition: top 0.3s ease;
   background-color: white;
-  z-index: 1;
+  z-index: 999;
   .zero-message-content {
     color: #67c23a;
   }

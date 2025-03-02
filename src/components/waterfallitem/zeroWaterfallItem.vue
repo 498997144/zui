@@ -7,7 +7,9 @@
 </template>
 
 <script setup>
-
+defineOptions({
+  name: 'zeroWaterfallItem'
+})
 </script>
 
 <style scoped lang="scss">

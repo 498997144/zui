@@ -10,6 +10,10 @@
 import {ref} from 'vue';
 import {useWaterfall} from './useWaterfall.js'
 
+defineOptions({
+  name: 'zeroWaterfall'
+})
+
 const props = defineProps({
   topGap: {
     type: Number,

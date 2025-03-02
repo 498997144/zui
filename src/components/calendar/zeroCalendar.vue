@@ -45,6 +45,11 @@
 import zeroIcon from '../icon/zeroIcon.vue';
 import {useCalendar} from './useCalendar.js';
 
+
+defineOptions({
+  name: 'zeroCalendar'
+})
+
 const props = defineProps({
   modelValue: {
     type: [String, Object],

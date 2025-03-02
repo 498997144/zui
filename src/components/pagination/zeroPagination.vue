@@ -23,6 +23,10 @@
 import {ref} from 'vue';
 import {userPagination} from "./index.js";
 
+defineOptions({
+  name: 'zeroPagination'
+})
+
 const props = defineProps({
   pageSize: {
     type: Number,
@@ -40,8 +44,8 @@ const props = defineProps({
     type: Number,
     default: 1
   },
-  showTotal:{
-    type:Boolean,
+  showTotal: {
+    type: Boolean,
     default: false
   }
 })
@@ -63,6 +67,7 @@ const {options} = userPagination(props, emit, containerRef, prevBtnRef, nextBtnR
   user-select: none;
   cursor: pointer;
   font-size: 12px;
+
   .page-list {
     display: flex;
   }
@@ -76,6 +81,7 @@ const {options} = userPagination(props, emit, containerRef, prevBtnRef, nextBtnR
     border: 1px solid #eeeeee;
     margin: 0 5px;
     padding: 0 2px;
+
     &.active {
       background: var(--bg-color);
       color: white;
@@ -113,6 +119,7 @@ const {options} = userPagination(props, emit, containerRef, prevBtnRef, nextBtnR
       outline: 1px solid #eeeeee;
       border: none;
       text-align: center;
+
       &:focus {
         outline-color: #858585;
       }

@@ -1,7 +1,7 @@
 <script setup>
 import {reactive} from 'vue';
 import zeroSwiper from "@/swiper/zeroSwiper.vue";
-import zeroSwiperItem from "@/swiper/zeroSwiperItem.vue";
+import zeroSwiperItem from "@/swiperitem/zeroSwiperItem.vue";
 import imgpath1 from '@img/1.webp';
 import imgpath2 from '@img/2.webp';
 import imgpath3 from '@img/3.webp';
@@ -32,8 +32,6 @@ const imgList = reactive([
 </template>
 <script setup>
   import {reactive} from 'vue';
-  import zeroSwiper from "@/swiper/zeroSwiper.vue";
-  import zeroSwiperItem from "@/swiper/zeroSwiperItem.vue";
   import imgpath1 from '@img/1.webp';
   import imgpath2 from '@img/2.webp';
   import imgpath3 from '@img/3.webp';

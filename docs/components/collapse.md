@@ -1,6 +1,6 @@
 <script setup>
-import zeroCollapse from "@/collapase/zeroCollapse.vue";
-import zeroCollapseItem from "@/collapase/zeroCollapseItem.vue";
+import zeroCollapse from "@/collapse/zeroCollapse.vue";
+import zeroCollapseItem from "@/collapseitem/zeroCollapseItem.vue";
 import {ref} from 'vue';
 const value = ref(['a']);
 </script>

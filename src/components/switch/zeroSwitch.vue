@@ -11,6 +11,10 @@
 import {ref} from 'vue';
 import {useSwitch} from './index.js';
 
+defineOptions({
+  name: 'zeroSwitch'
+})
+
 const props = defineProps({
   modelValue: {
     type: [Boolean, String, Number],

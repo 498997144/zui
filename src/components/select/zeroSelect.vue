@@ -27,6 +27,10 @@ import zeroIcon from '../icon/zeroIcon.vue';
 import zeroInput from '../input/zeroInput.vue';
 import zeroDropDown from '../dropdown/zeroDropDown.vue';
 
+defineOptions({
+  name: 'zeroSelect'
+})
+
 const props = defineProps({
   modelValue: {
     type: [Array, String, Number, Boolean],

@@ -22,6 +22,10 @@
 import {ref, watch} from 'vue';
 import {useDropdown} from './index.js';
 
+defineOptions({
+  name: 'zeroDropDown'
+})
+
 const props = defineProps({
   options: {
     type: Array,

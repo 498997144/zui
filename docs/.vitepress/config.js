@@ -1,14 +1,16 @@
 import {defineConfig} from 'vitepress';
+import path from 'path';
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
     // 配置文档路径别名
     resolve: {
       alias: {
-        '@': '../../src/components',
-        '@dir': '../../../src/directives',
-        '@img': '../../src/imgs',
-        '@style': '../../../src/style',
+        '@': path.join(process.cwd(), '/src/components'),
+        '@dir': path.join(process.cwd(), '/src/directives'),
+        '@img': path.join(process.cwd(), '/src/imgs'),
+        '@style': path.join(process.cwd(), '/src/style'),
       }
     },
   },
@@ -17,7 +19,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      {text: '主页', link: '/'},
+      {text: '主页', link: '/components/slider'},
       {text: '文档', link: '/components/slider'}
     ],
 
@@ -63,7 +65,8 @@ export default defineConfig({
     ],
     styles: [
       // 添加自定义样式
-      '../../src/style/var.scss'
+      // '../../src/style/var.scss'
+      '@style/var.scss'
     ],
     //开启本地搜索
     search: {
