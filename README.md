@@ -21,5 +21,5 @@ import {zeroSlider} from 'yzh-zero-ui';
 
 #### 文档示例
 
- [ZERO-UI](http://localhost:5174/components/slider.html) 
+ [zui](https://498997144.github.io/zui/components/slider.html) 
 
