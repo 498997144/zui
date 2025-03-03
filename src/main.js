@@ -1,10 +1,11 @@
 import {createApp} from 'vue';
 import App from "./App.vue";
-import 'normalize.css';
-import "@/style/var.scss";
-import "@/style/global.scss";
+// import 'normalize.css';
+// import "@/style/var.scss";
+// import "@/style/global.scss";
 
-import zui from './index.js';
+import zui from 'yzh-zero-ui';
+import 'yzh-zero-ui/dist/style.css';
 
 // fontawesome
 // import {library} from '@fortawesome/fontawesome-svg-core';
@@ -15,7 +16,6 @@ import zui from './index.js';
 const app = createApp(App);
 app.use(zui);
 app.mount('#app');
-
 
 // 将所有 solid 图标添加到库中
 // import * as fas from '@fortawesome/free-solid-svg-icons';

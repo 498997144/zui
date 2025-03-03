@@ -14,7 +14,7 @@ export default defineConfig({
       }
     },
   },
-  title: "ZUI",
+  title: "ZERO-UI",
   description: "学习项目",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

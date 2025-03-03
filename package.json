@@ -1,12 +1,12 @@
 {
-  "name": "zui",
+  "name": "yzh-zero-ui",
   "private": false,
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/zui.cjs.js",
-  "module": "dist/zui.es.js",
-  "unpkg": "dist/zui.umd.js",
+  "main": "dist/zero-ui.cjs.js",
+  "module": "dist/zero-ui.es.js",
+  "unpkg": "dist/zero-ui.umd.js",
   "files": [
     "dist"
   ],
@@ -25,7 +25,8 @@
     "@popperjs/core": "^2.11.8",
     "normalize.css": "^8.0.1",
     "p-limit": "^6.2.0",
-    "vue": "^3.5.12"
+    "vue": "^3.5.12",
+    "yzh-zero-ui": "^1.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
@@ -36,5 +37,6 @@
     "vite": "^5.4.10",
     "vite-plugin-bundle-analyzer": "^0.0.1",
     "vitepress": "^1.5.0"
-  }
+  },
+  "node": ">=20.11.0"
 }

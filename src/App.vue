@@ -21,11 +21,11 @@
     <!--icon-->
     <!--    <font-awesome-icon :icon="['fas', 'user-secret']" />-->
     <!--    <font-awesome-icon :icon="['fas', 'house']" />-->
-<!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
+    <!--    <zeroIcon color="red" size="2x" name="user-secret"></zeroIcon>-->
     <!--    <zeroIcon color="blue" name="check"></zeroIcon>-->
     <!--    switch开关-->
-    <!--    <zeroSwitch active-text="打开了" disabled in-active-text="关闭了" v-model="value"></zeroSwitch>-->
-    <!--    <zeroSwitch active-text="打开了" :in-active-value="0" :active-value="50"  in-active-text="关闭了" v-model="value"></zeroSwitch>-->
+    <!--        <zeroSwitch active-text="打开了" disabled in-active-text="关闭了" v-model="value"></zeroSwitch>-->
+    <!--        <zeroSwitch active-text="打开了" :in-active-value="0" :active-value="50"  in-active-text="关闭了" v-model="value"></zeroSwitch>-->
     <!--    collapse-->
     <!--    <div style="width: 200px;height: 400px">-->
     <!--      <zeroCollapse v-model="value">-->
@@ -38,11 +38,11 @@
     <!--      </zeroCollapse>-->
     <!--    </div>-->
     <!--    dropdown-->
-    <!--    <zeroDropDown :options="opt">-->
-    <!--      <zero-button>点击展示下拉菜单</zero-button>-->
-    <!--    </zeroDropDown>-->
+    <!--        <zeroDropDown :options="opt">-->
+    <!--          <zero-button>点击展示下拉菜单</zero-button>-->
+    <!--        </zeroDropDown>-->
     <!--    消息提示-->
-    <!--    <zeroMessage message="lorem 12321312"></zeroMessage>-->
+    <!--        <zeroMessage message="lorem 12321312"></zeroMessage>-->
     <!--    <zero-button   @click="createMessage">按钮</zero-button>-->
     <!--    瀑布流布局-->
     <!--    <zeroWaterfall>-->
@@ -88,6 +88,7 @@
 
 <script setup>
 import {onMounted, ref, watch, reactive, onBeforeMount, shallowReactive, shallowRef} from 'vue';
+
 // 虚拟滚动
 // const virtualList = reactive(Array.from({length: 100000}, (_, index) => index));
 
