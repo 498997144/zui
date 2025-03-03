@@ -3,6 +3,7 @@ import path from 'path';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/zui/',
   vite: {
     // 配置文档路径别名
     resolve: {
